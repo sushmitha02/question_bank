@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @survey.name
+
+%p
+  %b Questions
+  - @survey.questions.each do |question|
+    %p= question.content
+
+    %b Answers
+    - question.answers.each do |answer|
+      %p= answer.content
+
+= link_to 'Edit', edit_survey_path(@survey)
+\|
+= link_to 'Back', surveys_path

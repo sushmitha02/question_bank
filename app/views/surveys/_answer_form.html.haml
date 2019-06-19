@@ -1,0 +1,6 @@
+.field
+  = f.label :content, "Answers"
+  = f.text_field :content
+.field   
+  = f.hidden_field :_destroy
+  = link_to "remove", '#', class: "remove_fields"
